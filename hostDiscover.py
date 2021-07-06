@@ -45,10 +45,6 @@ class hostScanner:
 		except socket.error:
 			print('[-] Error occured in constructing UDP communication')
 
-	def results():
-		for host in self.liveHosts:
-			print('[+] Host: {device} is alive'.format(device=host))
-
 	def run():
 		if self.network_type == 'A':
 			analyzeANetwork(self.network_headers)
@@ -59,7 +55,6 @@ class hostScanner:
 		else:
 			print('[-] Incorrect Network Type passed try again!')
 			sys.exit()
-
 
 def main():
 	command = optparse.OptionParser()
